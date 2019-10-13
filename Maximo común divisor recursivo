@@ -1,10 +1,19 @@
-/**
- *
- * @author Citlalli
- */
+import java.util.Scanner;
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-     //recursividad
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int a,b,res;
+        a=s.nextInt();
+        b=s.nextInt();
+        res=mcd(a,b);
+        System.out.println(res);
+    }
+    static int mcd(int a,int b){
+        if(b==0){
+            return a;
+        }else{
+            return mcd(b,a%b);
+        }
+    }
+}
